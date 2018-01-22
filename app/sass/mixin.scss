@@ -1,0 +1,10 @@
+@mixin base-markup-for-pages($pt:0, $pb:0, $bcolor: #fff){
+    padding-top: $pt;
+    padding-bottom: $pb;
+
+    background-color: $bcolor;
+    background-size: cover;
+
+    position: relative;
+    height: 100%;
+}

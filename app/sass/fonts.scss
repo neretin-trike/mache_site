@@ -1,0 +1,38 @@
+@mixin font($fontName, $urlName: $fontName, $weight: normal, $style: normal) {
+    font-family: '#{$fontName}';
+    src: url("../fonts/#{$fontName}/#{$urlName}.woff2") format("woff2"),
+         url("../fonts/#{$fontName}/#{$urlName}.woff") format("woff"),
+         url('../fonts/#{$fontName}/#{$urlName}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+}
+
+$font-name: 'Karla';
+@font-face { @include font('#{$font-name}', '#{$font-name}-regular', 400);}
+@font-face { @include font('#{$font-name}', '#{$font-name}-bold', 700);}
+
+$font-name: 'Lora';
+@font-face { @include font('#{$font-name}', '#{$font-name}-regular', 400,italic);}
+
+$font-name: 'OpenSans';
+@font-face { @include font('#{$font-name}', '#{$font-name}-regular', 400);}
+
+$font-name: 'Raleway';
+@font-face { @include font('#{$font-name}', '#{$font-name}-regular', 400);}
+@font-face { @include font('#{$font-name}', '#{$font-name}-medium', 500);}
+@font-face { @include font('#{$font-name}', '#{$font-name}-extrabold', 800);}
+
+$font-name: 'RobotoSlab';
+@font-face { @include font('#{$font-name}', '#{$font-name}-regular', 400);}
+
+
+// @font-face { @include font('#{$font-name}', '#{$font-name}-thin', 100);}
+// @font-face { @include font('#{$font-name}', '#{$font-name}-extralight', 200);}
+// @font-face { @include font('#{$font-name}', '#{$font-name}-light', 300);}
+// @font-face { @include font('#{$font-name}', '#{$font-name}-regular', 400);}
+// @font-face { @include font('#{$font-name}', '#{$font-name}-medium', 500);}
+// @font-face { @include font('#{$font-name}', '#{$font-name}-semibold', 600);}
+// @font-face { @include font('#{$font-name}', '#{$font-name}-bold', 700);}
+// @font-face { @include font('#{$font-name}', '#{$font-name}-extrabold', 800);}
+// @font-face { @include font('#{$font-name}', '#{$font-name}-black', 900);}
+
