@@ -1,51 +1,3 @@
-@font-face {
-  font-family: "Karla";
-  src: url("../fonts/Karla/Karla-regular.woff2") format("woff2"), url("../fonts/Karla/Karla-regular.woff") format("woff"), url("../fonts/Karla/Karla-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Karla";
-  src: url("../fonts/Karla/Karla-bold.woff2") format("woff2"), url("../fonts/Karla/Karla-bold.woff") format("woff"), url("../fonts/Karla/Karla-bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Lora";
-  src: url("../fonts/Lora/Lora-regular.woff2") format("woff2"), url("../fonts/Lora/Lora-regular.woff") format("woff"), url("../fonts/Lora/Lora-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans/OpenSans-regular.woff2") format("woff2"), url("../fonts/OpenSans/OpenSans-regular.woff") format("woff"), url("../fonts/OpenSans/OpenSans-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway/Raleway-regular.woff2") format("woff2"), url("../fonts/Raleway/Raleway-regular.woff") format("woff"), url("../fonts/Raleway/Raleway-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway/Raleway-medium.woff2") format("woff2"), url("../fonts/Raleway/Raleway-medium.woff") format("woff"), url("../fonts/Raleway/Raleway-medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway/Raleway-extrabold.woff2") format("woff2"), url("../fonts/Raleway/Raleway-extrabold.woff") format("woff"), url("../fonts/Raleway/Raleway-extrabold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal; }
-
-@font-face {
-  font-family: "RobotoSlab";
-  src: url("../fonts/RobotoSlab/RobotoSlab-regular.woff2") format("woff2"), url("../fonts/RobotoSlab/RobotoSlab-regular.woff") format("woff"), url("../fonts/RobotoSlab/RobotoSlab-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal; }
-
 html {
   font-size: 62.5%; }
 
@@ -57,7 +9,8 @@ body {
   margin: 0 auto; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: 0.1rem solid #a2a1bf; }
 
 figure {
   padding: 0;
@@ -68,7 +21,8 @@ button {
   border: none;
   background: none;
   cursor: pointer;
-  padding: 0; }
+  padding: 0;
+  display: block; }
 
 input {
   outline: none;
@@ -78,7 +32,7 @@ a {
   text-decoration: none;
   color: black; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, blockquote {
   margin: 0; }
 
 /*-------------------------------

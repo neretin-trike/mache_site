@@ -1,5 +1,5 @@
 {
-  "name": "landr",
+  "name": "mache",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "browser-sync": "^2.18.13",
     "colors": "^1.1.2",
     "gulp": "^3.9.1",
-    "gulp-haml": "^1.0.1",
+    "gulp-jhaml": "^1.0.8",
     "gulp-sass": "^3.1.0"
   }
 }

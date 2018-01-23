@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'); // Подключаем Browser Sync
-    var haml = require('gulp-haml');
+    var jhaml = require('gulp-jhaml');
 
 gulp.task('sass', function(){ // Создаем таск "sass"
     return gulp.src('app/sass/style.scss') // Берем источник
@@ -21,7 +21,9 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('haml', function(){
     return gulp.src(['app/pages/*.haml'])
-        .pipe(haml())
+        .pipe(jhaml(({
+            compiler: 'creationix'
+        })))
         .pipe(gulp.dest('app')) // Выгружаем результата в папку app/css
 });
 

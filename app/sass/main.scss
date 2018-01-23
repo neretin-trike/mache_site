@@ -14,7 +14,7 @@ body{
 
 *{
     box-sizing: border-box;
-    // border: 0.1rem solid #a2a1bf; 
+    border: 0.1rem solid #a2a1bf; 
 }
 
 figure{
@@ -28,6 +28,8 @@ button{
     background: none;
     cursor: pointer;
     padding: 0;
+
+    display: block;
 }
 
 input{
@@ -40,7 +42,7 @@ a{
     color: black;
 }
 
-h1, h2, h3, p{
+h1, h2, h3, p, blockquote{
     margin: 0;
 }
 
