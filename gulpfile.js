@@ -27,8 +27,30 @@ gulp.task('haml', function(){
         .pipe(gulp.dest('app')) // Выгружаем результата в папку app/css
 });
 
+
+var through = require('through2');
+var process = require('child_process')
+
+gulp.task('foobar', function (){
+    gulp.src('app/pages/*.haml')
+        .pipe(through.obj(function (chunk, enc, cb) {
+
+            var filename = chunk.path.replace(/^.*[\\\/]/, ''),
+                name = filename.substr(0, filename.lastIndexOf('.'));
+
+            process.exec('haml '+ chunk.path +' app/'+ name +'.html', function (error, stdout, stderr) {
+                if (error) console.log(error.message)
+            })
+
+            console.log('chunk', chunk.path) // this should log now
+            console.log(name);
+
+            cb(null, chunk)
+    }))
+});
+
 gulp.task('watch', ['browser-sync', 'sass'], function() {
     gulp.watch('app/**/*.scss', ['sass']); // Наблюдение за sass файлами
-    gulp.watch('app/**/*.haml', ['haml']); // Наблюдение за sass файлами
+    gulp.watch('app/**/*.haml', ['foobar']); // Наблюдение за haml файлами
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
 });
