@@ -66,76 +66,41 @@
                             %h2 Check Our Prices
                             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
                     .row
-                        .price-item(class='col-sm-3')
-                            .cost $ <span>19</span> per month
-                            .rate Standard
-                            %ul
-                                %li 5 Projects
-                                %li 200 MB Storage
-                                %li Notification setting
-                                %li Password protection
-                            %button Buy now
-                        .price-item(class='col-sm-3')
-                            .cost(class='special') $ <span>39</span> per month 
-                            .rate Business
-                            %ul
-                                %li 15 Projects
-                                %li 1 GB Storage
-                                %li Notification setting
-                                %li Password protection
-                            %button Buy now
-                        .price-item(class='col-sm-3')
-                            .cost $ <span>59</span> per month
-                            .rate Premium
-                            %ul
-                                %li 30 Projects
-                                %li 2 GB Storage
-                                %li Notification setting
-                                %li Password protection
-                            %button Buy now
-                        .price-item(class='col-sm-3')
-                            .cost $ <span>99</span> per month
-                            .rate Unlimited
-                            %ul
-                                %li Unlimited Projects
-                                %li Unlimited Storage
-                                %li Notification setting
-                                %li Password protection
-                            %button Buy now
+                        :ruby
+                            price_item = [
+                                { 'cost' => '19','rate' => 'Standard' ,'project' => '5 Projects', 'storage' => '200 MB Storage', 'notify' => 'Notification setting', 'protect' => 'Password protection'},
+                                { 'cost' => '39','rate' => 'Business' ,'project' => '15 Projects', 'storage' => '1 GB Storage', 'notify' => 'Notification setting', 'protect' => 'Password protection'},
+                                { 'cost' => '59','rate' => 'Premium' ,'project' => '30 Projects', 'storage' => '2 GB Storage', 'notify' => 'Notification setting', 'protect' => 'Password protection'},
+                                { 'cost' => '99','rate' => 'Unlimited' ,'project' => 'Unlimited Projects', 'storage' => 'Unlimited Storage', 'notify' => 'Notification setting', 'protect' => 'Password protection'}
+                            ]
+                        - price_item.each do |item|
+                            .price-item(class='col-sm-3')
+                                .cost $ <span>#{item['cost']}</span> per month
+                                .rate #{item['rate']}
+                                %ul
+                                    %li #{item['project']}
+                                    %li #{item['storage']}
+                                    %li #{item['notify']}
+                                    %li #{item['protect']}
+                                %button Buy now
             %section.aditional-info
                 .container
                     .row
-                        .info-item(class='col-sm-4 d-flex')
-                            .icon.resolution icon
-                            .description 
-                                %h3 High resolution
-                                %p Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                        .info-item(class='col-sm-4 d-flex')
-                            .icon.photography icon
-                            .description 
-                                %h3 Photography
-                                %p Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                        .info-item(class='col-sm-4 d-flex')
-                            .icon.customize icon
-                            .description 
-                                %h3 Easy to customize
-                                %p Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                    .row
-                        .info-item(class='col-sm-4 d-flex')
-                            .icon.support icon
-                            .description 
-                                %h3 24/7 support
-                                %p Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                        .info-item(class='col-sm-4 d-flex')
-                            .icon.theme icon
-                            .description 
-                                %h3 Powerfull theme
-                                %p Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-                        .info-item(class='col-sm-4 d-flex')
-                            .icon.optimization icon
-                            .description 
-                                %h3 Seo optimization
-                                %p Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                        :ruby
+                            info_item = [
+                                {'icon' => 'resolution', 'header' => 'High resolution', 'text' => 'Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut '},
+                                {'icon' => 'photography', 'header' => 'Photography', 'text' => 'Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut '},
+                                {'icon' => 'customize', 'header' => 'Easy to customize', 'text' => 'Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut '},
+                                {'icon' => 'support', 'header' => '24/7 support', 'text' => 'Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut '},
+                                {'icon' => 'theme', 'header' => 'Powerfull theme', 'text' => 'Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut '},
+                                {'icon' => 'optimization', 'header' => 'Seo optimization', 'text' => 'Lorem ipsum dolor sit amet,  adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut '}
+                            ]
+                        - info_item.each do |item|
+                            .info-item(class='col-sm-4 d-flex')
+                                .icon(class="#{item['icon']}") icon
+                                .description
+                                    %h3 #{item['header']}
+                                    %p #{item['text']}
             %section.banner
                 .container
                     .row
@@ -148,37 +113,21 @@
                             %h2 Our Latest Update
                             %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     .row
-                        .news-item(class='col-sm-4')
-                            .photo
-                                %img image
-                            %h3 Lorem ipsuma dolor sit
-                            %p Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et 
-                        .news-item(class='col-sm-4')
-                            .photo
-                                %img image
-                            %h3 Lorem ipsuma dolor sit
-                            %p Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et 
-                        .news-item(class='col-sm-4')
-                            .photo
-                                %img image
-                            %h3 Lorem ipsuma dolor sit
-                            %p Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et 
-                    .row
-                        .news-item(class='col-sm-4')
-                            .photo
-                                %img image
-                            %h3 Lorem ipsuma dolor sit
-                            %p Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et 
-                        .news-item(class='col-sm-4')
-                            .photo
-                                %img image
-                            %h3 Lorem ipsuma dolor sit
-                            %p Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et 
-                        .news-item(class='col-sm-4')
-                            .photo
-                                %img image
-                            %h3 Lorem ipsuma dolor sit
-                            %p Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et 
+                        :ruby
+                            news_item = [
+                                {'photo' => '../images/news/photo_1.png', 'header' => 'Lorem ipsuma dolor sit', 'text' => 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et'},
+                                {'photo' => '../images/news/photo_2.png', 'header' => 'Lorem ipsuma dolor sit', 'text' => 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et'},
+                                {'photo' => '../images/news/photo_3.png', 'header' => 'Lorem ipsuma dolor sit', 'text' => 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et'},
+                                {'photo' => '../images/news/photo_4.png', 'header' => 'Lorem ipsuma dolor sit', 'text' => 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et'},
+                                {'photo' => '../images/news/photo_5.png', 'header' => 'Lorem ipsuma dolor sit', 'text' => 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et'},
+                                {'photo' => '../images/news/photo_6.png', 'header' => 'Lorem ipsuma dolor sit', 'text' => 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et'}
+                            ]
+                        - news_item.each do |item|
+                            .news-item(class='col-sm-4')
+                                .photo
+                                    %img(src='#{item['photo']}')
+                                %h3 #{item['header']}
+                                %p #{item['text']}
                     .row(class='justify-content-center')
                         %a(href='#') Show more 
             %section.aditional-info-2
