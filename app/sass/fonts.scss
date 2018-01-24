@@ -7,6 +7,15 @@
     font-style: $style;
 }
 
+$font-name: 'Lato';
+
+@font-face { @include font('#{$font-name}', '#{$font-name}-light', 300);}
+@font-face { @include font('#{$font-name}', '#{$font-name}-lightItalic', 300, italic);}
+@font-face { @include font('#{$font-name}', '#{$font-name}-regular', 400);}
+@font-face { @include font('#{$font-name}', '#{$font-name}-regularItalic', 400, italic);}
+@font-face { @include font('#{$font-name}', '#{$font-name}-bold', 700);}
+@font-face { @include font('#{$font-name}', '#{$font-name}-black', 900);}
+
 // @font-face { @include font('#{$font-name}', '#{$font-name}-thin', 100);}
 // @font-face { @include font('#{$font-name}', '#{$font-name}-extralight', 200);}
 // @font-face { @include font('#{$font-name}', '#{$font-name}-light', 300);}
