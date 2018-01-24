@@ -31,26 +31,29 @@ gulp.task('haml', function(){
 var through = require('through2');
 var process = require('child_process')
 
-gulp.task('foobar', function (){
-    gulp.src('app/pages/*.haml')
+gulp.task('ruby-haml', function (){
+    gulp.src('app/pages/*')
         .pipe(through.obj(function (chunk, enc, cb) {
 
-            var filename = chunk.path.replace(/^.*[\\\/]/, ''),
-                name = filename.substr(0, filename.lastIndexOf('.'));
+            var name = chunk.path.match(/[^\\]*\.*(?=\.)/), // [^\\]*\.(\w+)$ with extension
+                dest = 'app/';
+                cmd = 'haml '+ chunk.path + ' ' + dest + name +'.html';
 
-            process.exec('haml '+ chunk.path +' app/'+ name +'.html', function (error, stdout, stderr) {
+            process.exec(cmd , function (error, stdout, stderr) { 
                 if (error) console.log(error.message)
             })
 
-            console.log('chunk', chunk.path) // this should log now
+            console.log('chunk', chunk.path); // this should log now 
             console.log(name);
-
+            
             cb(null, chunk)
-    }))
+        }))
 });
 
 gulp.task('watch', ['browser-sync', 'sass'], function() {
     gulp.watch('app/**/*.scss', ['sass']); // Наблюдение за sass файлами
-    gulp.watch('app/**/*.haml', ['foobar']); // Наблюдение за haml файлами
+    gulp.watch('app/**/*.haml', ['ruby-haml']); // Наблюдение за haml файлами
     gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
 });
+
+gulp.task('default', ['watch']);
