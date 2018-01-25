@@ -254,3 +254,49 @@ header {
       font-weight: 400;
       text-transform: uppercase;
       margin-top: 2.4rem; }
+
+/*-------------------------------
+------------ QUOTES -------------
+-------------------------------*/
+.quotes {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  background-image: url(../images/background.png);
+  text-align: center; }
+  .quotes .arrow {
+    min-width: 0;
+    height: 3.3rem;
+    background-color: transparent;
+    background-image: url(../images/arrow_left.png);
+    background-position: center;
+    background-repeat: no-repeat; }
+    .quotes .arrow.arr-right {
+      transform: scaleX(-1); }
+  .quotes blockquote {
+    color: #ffffff;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    padding: 0 7.5rem; }
+    .quotes blockquote:before {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-bottom: 3rem;
+      width: 6.2rem;
+      height: 5rem;
+      background-image: url(../images/quote_open.png); }
+    .quotes blockquote:after {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-top: 3rem;
+      width: 6.2rem;
+      height: 5rem;
+      background-image: url(../images/quote_open.png);
+      transform: scale(-1); }
