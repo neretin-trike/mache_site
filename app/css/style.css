@@ -46,7 +46,8 @@ body {
   margin: 0 auto; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: 0.1rem solid #a2a1bf; }
 
 figure {
   padding: 0;
@@ -353,3 +354,40 @@ header {
       margin: 0 auto;
       margin-top: 2rem;
       margin-bottom: 3.5rem; }
+
+/*-------------------------------
+-------- ADITIONAL INFO ---------
+-------------------------------*/
+.aditional-info {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  height: 100%; }
+  .aditional-info .info-item {
+    margin: 3.5rem 0; }
+    .aditional-info .info-item .icon {
+      width: 16.5rem;
+      height: 6.5rem;
+      margin-right: 2.5rem;
+      background-repeat: no-repeat;
+      background-position: left top; }
+      .aditional-info .info-item .icon.resolution {
+        background-image: url(../images/info/resolution.png); }
+      .aditional-info .info-item .icon.photography {
+        background-image: url(../images/info/photography.png); }
+      .aditional-info .info-item .icon.customize {
+        background-image: url(../images/info/customize.png); }
+      .aditional-info .info-item .icon.support {
+        background-image: url(../images/info/support.png); }
+      .aditional-info .info-item .icon.theme {
+        background-image: url(../images/info/theme.png); }
+      .aditional-info .info-item .icon.optimization {
+        background-image: url(../images/info/optimization.png); }
+    .aditional-info .info-item h3 {
+      text-transform: uppercase;
+      font-weight: 400;
+      color: #ed145b;
+      font-size: 1.5rem;
+      margin-bottom: 2rem; }

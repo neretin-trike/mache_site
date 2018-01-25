@@ -14,7 +14,7 @@ body{
 
 *{
     box-sizing: border-box;
-    // border: 0.1rem solid #a2a1bf; 
+    border: 0.1rem solid #a2a1bf; 
 }
 
 figure{
@@ -367,6 +367,7 @@ header{
 /*-------------------------------
 ------------ PRICES -------------
 -------------------------------*/
+
 .prices{
     @include base-markup-for-pages(13.5rem, 13.5rem, #f4f4f4);
     text-align: center;
@@ -439,4 +440,61 @@ header{
         }
 
     }
+}
+
+/*-------------------------------
+-------- ADITIONAL INFO ---------
+-------------------------------*/
+
+.aditional-info{
+    @include base-markup-for-pages(10rem, 10rem);
+
+    .info-item{
+        margin: 3.5rem 0;
+
+        .icon{
+            width: 16.5rem;
+            height: 6.5rem;
+            margin-right: 2.5rem;
+
+            background-repeat: no-repeat;
+            background-position: left top;
+
+            &.resolution{
+                background-image: url(../images/info/resolution.png);
+            }
+
+            &.photography{
+                background-image: url(../images/info/photography.png);
+            }
+
+            &.customize{
+                background-image: url(../images/info/customize.png);
+            }
+
+            &.support{
+                background-image: url(../images/info/support.png);
+            }
+
+            &.theme{
+                background-image: url(../images/info/theme.png);
+            }
+
+            &.optimization{
+                background-image: url(../images/info/optimization.png);
+            }
+        }
+
+        h3{
+            text-transform: uppercase;
+            font-weight: $font-weight-regular;
+            color: $color-pink;
+
+            font-size: 1.5rem;
+
+            margin-bottom: 2rem;
+        }
+
+    }
+
 }
