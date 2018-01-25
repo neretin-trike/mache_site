@@ -46,8 +46,7 @@ body {
   margin: 0 auto; }
 
 * {
-  box-sizing: border-box;
-  border: 0.1rem solid #a2a1bf; }
+  box-sizing: border-box; }
 
 figure {
   padding: 0;
@@ -508,3 +507,44 @@ header {
   .aditional-info-2 button {
     margin: 0 auto;
     margin-top: 5rem; }
+
+/*-------------------------------
+----------- DOWNLOAD ------------
+-------------------------------*/
+.download {
+  padding-top: 12.5rem;
+  padding-bottom: 16.5rem;
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  background-image: url(../images/Safari-Browser.png);
+  background-size: 45%;
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  position: relative;
+  overflow: hidden; }
+  .download h2:after {
+    margin-left: 0; }
+  .download p {
+    margin-bottom: 5rem;
+    padding-right: 10rem; }
+
+/*-------------------------------
+------------ FOOTER -------------
+-------------------------------*/
+footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #2b2b2b;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  color: #ffffff;
+  font-weight: 400;
+  text-transform: uppercase; }
+  footer p:last-child {
+    font-size: 1.6rem; }
+  footer p span {
+    font-size: 4rem;
+    color: #ed145b; }

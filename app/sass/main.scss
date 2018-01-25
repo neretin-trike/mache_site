@@ -14,7 +14,7 @@ body{
 
 *{
     box-sizing: border-box;
-    border: 0.1rem solid #a2a1bf; 
+    // border: 0.1rem solid #a2a1bf; 
 }
 
 figure{
@@ -643,4 +643,55 @@ header{
         margin-top: 5rem;
     }
 
+}
+
+/*-------------------------------
+----------- DOWNLOAD ------------
+-------------------------------*/
+
+.download{
+    @include base-markup-for-pages(12.5rem, 16.5rem);
+    background-image: url(../images/Safari-Browser.png);
+    background-size: 45%;
+    background-repeat: no-repeat;
+    background-position: 5% center;
+
+    position: relative;
+    overflow: hidden;
+
+    h2{
+        &:after{
+            margin-left: 0;
+        }
+    }
+
+    p{
+        margin-bottom: 5rem;
+        padding-right: 10rem;
+    }
+
+}
+
+/*-------------------------------
+------------ FOOTER -------------
+-------------------------------*/
+
+footer{
+    @include base-markup-for-pages(5rem, 5rem, #2b2b2b);
+
+    color: $color-white;
+    font-weight: $font-weight-regular;
+    text-transform: uppercase;
+
+    p{
+        &:last-child{
+            font-size: 1.6rem;
+        }
+
+        span{
+            font-size: 4rem;
+            color: $color-pink
+        }
+    }
+    
 }
