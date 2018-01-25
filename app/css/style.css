@@ -102,15 +102,13 @@ main {
   margin-top: -7rem; }
 
 button {
-  padding: 1.5rem 3rem;
+  padding: 1.8rem 3rem;
+  min-width: 20rem;
   color: #ffffff;
   text-transform: uppercase;
-  font-family: 'Karla';
   font-weight: 700;
-  background-color: #f7941d;
-  border-radius: 0.35rem; }
-  button:hover {
-    background-color: #29c2e1; }
+  background-color: #ed145b;
+  border-radius: 3.5rem; }
 
 /*-------------------------------
 ------------ HEADER -------------
@@ -136,4 +134,33 @@ header {
   background-size: cover;
   position: relative;
   height: 100%;
-  background-image: url(../images/background.png); }
+  background-image: url(../images/background.png);
+  text-align: center; }
+  .home h1 {
+    text-transform: uppercase;
+    font-size: 4.6rem;
+    font-weight: 300;
+    color: #ffffff; }
+    .home h1:after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      margin-top: 4rem;
+      width: 20rem;
+      height: 0.2rem;
+      background-color: #ed145b; }
+    .home h1 b {
+      font-weight: 900; }
+  .home p {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 3.8rem;
+    margin-top: 3rem;
+    margin-bottom: 6rem; }
+  .home button {
+    margin: 0 auto; }
+
+/*-------------------------------
+----------- SERVICES ------------
+-------------------------------*/
