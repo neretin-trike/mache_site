@@ -74,15 +74,20 @@
                                 { 'cost' => '99','rate' => 'Unlimited' ,'project' => 'Unlimited Projects', 'storage' => 'Unlimited Storage', 'notify' => 'Notification setting', 'protect' => 'Password protection'}
                             ]
                         - price_item.each do |item|
-                            .price-item(class='col-sm-3')
-                                .cost $ <span>#{item['cost']}</span> per month
-                                .rate #{item['rate']}
-                                %ul
-                                    %li #{item['project']}
-                                    %li #{item['storage']}
-                                    %li #{item['notify']}
-                                    %li #{item['protect']}
-                                %button Buy now
+                            .col-sm-3
+                                .price-item
+                                    - if item['rate'] == 'Business'
+                                        .cost.special <span>#{item['cost']}</span> per month
+
+                                    - else
+                                        .cost <span>#{item['cost']}</span> per month
+                                    .rate #{item['rate']}   
+                                    %ul
+                                        %li #{item['project']}
+                                        %li #{item['storage']}
+                                        %li #{item['notify']}
+                                        %li #{item['protect']}
+                                    %button Buy now
             %section.aditional-info
                 .container
                     .row
