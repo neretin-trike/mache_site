@@ -46,8 +46,7 @@ body {
   margin: 0 auto; }
 
 * {
-  box-sizing: border-box;
-  border: 0.1rem solid #a2a1bf; }
+  box-sizing: border-box; }
 
 figure {
   padding: 0;
@@ -83,20 +82,26 @@ h1, h2, h3, p, blockquote {
   top: 0;
   opacity: 0.35; }
 
-.page-title {
-  font-family: 'Raleway';
-  text-align: center;
-  text-transform: uppercase; }
-  .page-title p {
-    display: inline-block;
-    background-color: #f7941d;
-    padding: 0 0.5rem;
-    font-size: 1.3rem;
-    color: #ffffff;
-    font-weight: 500; }
-  .page-title h2 {
-    font-size: 2.5rem;
-    color: #23282f; }
+h2 {
+  margin-bottom: 3.5rem;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 3.8rem;
+  color: #5a5a5a;
+  line-height: 5.2rem; }
+  h2:after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 20rem;
+    height: 0.2rem;
+    background-color: #ed145b; }
+
+p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 3rem; }
 
 main {
   margin-top: -7rem; }
@@ -162,5 +167,51 @@ header {
     margin: 0 auto; }
 
 /*-------------------------------
------------ SERVICES ------------
+------------ ABOUT --------------
 -------------------------------*/
+.about {
+  padding-top: 13rem;
+  padding-bottom: 18rem;
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  background-image: url(../images/MacBook-Pro.png), linear-gradient(to left, #f4f4f4, #f4f4f4);
+  background-size: 55%, 100% 80%;
+  background-repeat: no-repeat;
+  background-position: right center, top;
+  position: relative;
+  overflow: hidden; }
+  .about:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1.8rem;
+    width: 100%;
+    height: 3.6rem;
+    background-color: #ed145b;
+    transform: rotate(-1.25deg); }
+  .about h2:after {
+    margin-left: 0; }
+  .about p {
+    margin-bottom: 4rem; }
+  .about a {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #ed145b;
+    line-height: 3.7rem; }
+    .about a:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -0.4rem;
+      margin-left: 1rem;
+      width: 2.7rem;
+      height: 2.7rem;
+      border: 0.1rem solid #ed145b;
+      border-radius: 3.5rem;
+      background-image: url(../images/play.png);
+      background-position: center;
+      background-repeat: no-repeat; }

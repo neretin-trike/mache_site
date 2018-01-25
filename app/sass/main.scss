@@ -14,7 +14,7 @@ body{
 
 *{
     box-sizing: border-box;
-    border: 0.1rem solid #a2a1bf; 
+    // border: 0.1rem solid #a2a1bf; 
 }
 
 figure{
@@ -59,25 +59,33 @@ h1, h2, h3, p, blockquote{
     opacity: 0.35;
 }
 
-.page-title{
-    font-family: 'Raleway';
-    text-align: center;
-    text-transform: uppercase;
-    
-    p{
-        display: inline-block;
-        background-color: #f7941d;
-        padding:0 0.5rem; 
 
-        font-size: 1.3rem;
-        color: #ffffff;
-        font-weight: $font-weight-medium;
-    }
+h2{
+    margin-bottom: 3.5rem;
 
-    h2{
-        font-size: 2.5rem;
-        color: #23282f;
+    font-weight: $font-weight-light;
+    font-style: italic;
+    font-size: 3.8rem;
+    color: $color-gray;
+
+    line-height: 5.2rem;
+
+    &:after{
+        content: '';
+        display: block;
+        margin: 0 auto;
+        margin-top: 3rem;
+
+        width: 20rem;
+        height: 0.2rem;
+        background-color: $color-pink;
     }
+}
+
+p{
+    font-weight: $font-weight-light;
+    font-size: 1.5rem;
+    line-height: 3rem;    
 }
 
 main{
@@ -170,9 +178,69 @@ header{
 }
 
 /*-------------------------------
------------ SERVICES ------------
+------------ ABOUT --------------
 -------------------------------*/
 
-.services{
-    
+.about{
+    @include base-markup-for-pages(13rem, 18rem);
+    background-image: url(../images/MacBook-Pro.png),
+                      linear-gradient(to left,#f4f4f4, #f4f4f4);
+    background-size: 55%, 100% 80%;
+    background-repeat: no-repeat;
+    background-position: right center, top;
+
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1.8rem;
+        width: 100%;
+        height: 3.6rem;
+        background-color: #ed145b;
+
+        transform: rotate(-1.25deg);
+    }
+
+    h2{
+        &:after{
+            margin-left: 0;
+        }
+    }
+
+    p{
+        margin-bottom: 4rem;
+    }
+
+    a{
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: $font-weight-regular;
+        font-size: 1.5rem;
+        color: $color-pink;
+
+        line-height: 3.7rem;        
+
+        &:after{
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -0.4rem;
+            margin-left: 1rem;
+
+            width: 2.7rem;
+            height:  2.7rem;
+
+            border: 0.1rem solid $color-pink;
+            border-radius: $big-border-radius;
+
+            background-image: url(../images/play.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+
 }
+
