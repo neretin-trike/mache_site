@@ -14,7 +14,7 @@ body{
 
 *{
     box-sizing: border-box;
-    // border: 0.1rem solid #a2a1bf; 
+    border: 0.1rem solid #a2a1bf; 
 }
 
 figure{
@@ -182,10 +182,10 @@ header{
 -------------------------------*/
 
 .about{
-    @include base-markup-for-pages(13rem, 18rem);
+    @include base-markup-for-pages(13rem, 15rem);
     background-image: url(../images/MacBook-Pro.png),
                       linear-gradient(to left,#f4f4f4, #f4f4f4);
-    background-size: 55%, 100% 80%;
+    background-size: 50%, 100% 83%;
     background-repeat: no-repeat;
     background-position: right center, top;
 
@@ -244,3 +244,59 @@ header{
 
 }
 
+/*-------------------------------
+----------- SERVICES ------------
+-------------------------------*/
+
+.services{
+    @include base-markup-for-pages(0, 11.5rem);
+    
+    text-align: center; 
+
+    & article p{
+        padding: 0 2.5rem;
+    }
+
+    .service-item{
+        margin-top: 8rem;
+
+        .icon{
+            margin: 0 auto;
+            
+            width: 13rem;
+            height: 13rem;
+
+            border: 0.1rem solid $color-lightgray;
+            border-radius: 100%;
+
+            background-position: center;
+            background-repeat: no-repeat;
+
+            &.editable{
+                background-image: url(../images/services/editable.png);
+            }
+
+            &.download{
+                background-image: url(../images/services/download.png);
+            }
+
+            &.design{
+                background-image: url(../images/services/design.png);
+            }
+
+            &.responsive{
+                background-image: url(../images/services/responsive.png);
+            }
+        }
+
+        p{
+            color: $color-pink;
+            font-size: 1.5rem;
+            font-weight: $font-weight-regular;
+            text-transform: uppercase;
+
+            margin-top: 2.4rem;
+        }
+    }
+
+}

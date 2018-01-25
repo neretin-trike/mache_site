@@ -46,7 +46,8 @@ body {
   margin: 0 auto; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: 0.1rem solid #a2a1bf; }
 
 figure {
   padding: 0;
@@ -171,13 +172,13 @@ header {
 -------------------------------*/
 .about {
   padding-top: 13rem;
-  padding-bottom: 18rem;
+  padding-bottom: 15rem;
   background-color: #fff;
   background-size: cover;
   position: relative;
   height: 100%;
   background-image: url(../images/MacBook-Pro.png), linear-gradient(to left, #f4f4f4, #f4f4f4);
-  background-size: 55%, 100% 80%;
+  background-size: 50%, 100% 83%;
   background-repeat: no-repeat;
   background-position: right center, top;
   position: relative;
@@ -215,3 +216,41 @@ header {
       background-image: url(../images/play.png);
       background-position: center;
       background-repeat: no-repeat; }
+
+/*-------------------------------
+----------- SERVICES ------------
+-------------------------------*/
+.services {
+  padding-top: 0;
+  padding-bottom: 11.5rem;
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  text-align: center; }
+  .services article p {
+    padding: 0 2.5rem; }
+  .services .service-item {
+    margin-top: 8rem; }
+    .services .service-item .icon {
+      margin: 0 auto;
+      width: 13rem;
+      height: 13rem;
+      border: 0.1rem solid #b3b3b3;
+      border-radius: 100%;
+      background-position: center;
+      background-repeat: no-repeat; }
+      .services .service-item .icon.editable {
+        background-image: url(../images/services/editable.png); }
+      .services .service-item .icon.download {
+        background-image: url(../images/services/download.png); }
+      .services .service-item .icon.design {
+        background-image: url(../images/services/design.png); }
+      .services .service-item .icon.responsive {
+        background-image: url(../images/services/responsive.png); }
+    .services .service-item p {
+      color: #ed145b;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-top: 2.4rem; }
