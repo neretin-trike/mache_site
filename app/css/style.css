@@ -46,8 +46,7 @@ body {
   margin: 0 auto; }
 
 * {
-  box-sizing: border-box;
-  border: 0.1rem solid #a2a1bf; }
+  box-sizing: border-box; }
 
 figure {
   padding: 0;
@@ -391,3 +390,85 @@ header {
       color: #ed145b;
       font-size: 1.5rem;
       margin-bottom: 2rem; }
+
+/*-------------------------------
+------------ BANNER -------------
+-------------------------------*/
+.banner {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  background-color: #ed145b;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  text-transform: uppercase;
+  color: #ffffff; }
+  .banner p {
+    font-size: 3.8rem;
+    line-height: 5.2rem; }
+  .banner button {
+    background-color: #ffffff;
+    color: #ed145b; }
+
+/*-------------------------------
+------------- NEWS --------------
+-------------------------------*/
+.news {
+  padding-top: 13.5rem;
+  padding-bottom: 6rem;
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  height: 100%; }
+  .news h2 {
+    text-align: center; }
+  .news .news-item {
+    margin-top: 8rem;
+    background-color: #f4f4f4; }
+    .news .news-item .photo {
+      position: relative;
+      overflow: hidden;
+      height: 25.2rem; }
+      .news .news-item .photo:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1.1rem;
+        bottom: -0.75rem;
+        background-color: #ed145b;
+        transform: rotate(1.25deg); }
+      .news .news-item .photo:hover:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(237, 20, 91, 0.85);
+        background-image: url(../images/news/zoom.png);
+        background-repeat: no-repeat;
+        background-position: center; }
+      .news .news-item .photo img {
+        width: 115%; }
+    .news .news-item h3 {
+      padding: 2rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 1.5rem; }
+    .news .news-item p {
+      padding: 2rem;
+      padding-top: 0; }
+  .news a {
+    display: inline-block;
+    margin-top: 11rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #ed145b; }
+    .news a:after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      margin-top: 0.5rem;
+      width: 1.7rem;
+      height: 0.8rem;
+      background-image: url(../images/arrow_down.png); }
