@@ -49,6 +49,7 @@ h1, h2, h3, p, blockquote{
 /*-------------------------------
 -------- GENERAL STYLES ---------
 -------------------------------*/
+
 .overlay{
     background-color: #f7941d;
     position: absolute;
@@ -79,6 +80,10 @@ h1, h2, h3, p, blockquote{
     }
 }
 
+main{
+    margin-top: -7rem;
+}
+
 button{
     padding: 1.5rem 3rem;
 
@@ -99,3 +104,30 @@ button{
 /*-------------------------------
 ------------ HEADER -------------
 -------------------------------*/
+
+header{
+    position: relative;
+    z-index: 999;
+
+    margin-top: 4rem;
+
+    a{
+        font-weight: $font-weight-bold;
+        font-size: 1.6rem;
+        color: $color-white;
+
+        &.selected{
+            color: $color-pink;
+        }
+    }
+
+}
+
+/*-------------------------------
+------------- HOME --------------
+-------------------------------*/
+
+.home{
+    @include base-markup-for-pages(28rem, 23rem);
+    background-image: url(../images/background.png);
+}

@@ -98,6 +98,9 @@ h1, h2, h3, p, blockquote {
     font-size: 2.5rem;
     color: #23282f; }
 
+main {
+  margin-top: -7rem; }
+
 button {
   padding: 1.5rem 3rem;
   color: #ffffff;
@@ -112,3 +115,25 @@ button {
 /*-------------------------------
 ------------ HEADER -------------
 -------------------------------*/
+header {
+  position: relative;
+  z-index: 999;
+  margin-top: 4rem; }
+  header a {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #ffffff; }
+    header a.selected {
+      color: #ed145b; }
+
+/*-------------------------------
+------------- HOME --------------
+-------------------------------*/
+.home {
+  padding-top: 28rem;
+  padding-bottom: 23rem;
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  background-image: url(../images/background.png); }
