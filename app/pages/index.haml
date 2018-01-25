@@ -128,11 +128,12 @@
                                 {'photo' => '../images/news/photo_6.png', 'header' => 'Lorem ipsuma dolor sit', 'text' => 'Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et'}
                             ]
                         - news_item.each do |item|
-                            .news-item(class='col-sm-4')
-                                .photo
-                                    %img(src='#{item['photo']}')
-                                %h3 #{item['header']}
-                                %p #{item['text']}
+                            .col-sm-4
+                                .news-item
+                                    .photo
+                                        %img(src='#{item['photo']}')
+                                    %h3 #{item['header']}
+                                    %p #{item['text']}
                     .row(class='justify-content-center')
                         %a(href='#') Show more 
             %section.aditional-info-2

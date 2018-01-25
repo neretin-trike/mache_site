@@ -46,7 +46,8 @@ body {
   margin: 0 auto; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  border: 0.1rem solid #a2a1bf; }
 
 figure {
   padding: 0;
@@ -70,6 +71,21 @@ a {
 
 h1, h2, h3, p, blockquote {
   margin: 0; }
+
+/*-------------------------------
+----- BOOSTRAP MARGIN AUTO ------
+-------------------------------*/
+.ml-auto {
+  margin-left: auto; }
+
+.mr-auto {
+  margin-right: auto; }
+
+.mt-auto {
+  margin-top: auto; }
+
+.mb-auto {
+  margin-bottom: auto; }
 
 /*-------------------------------
 -------- GENERAL STYLES ---------
@@ -407,6 +423,7 @@ header {
     font-size: 3.8rem;
     line-height: 5.2rem; }
   .banner button {
+    margin-right: 0;
     background-color: #ffffff;
     color: #ed145b; }
 
@@ -472,3 +489,22 @@ header {
       width: 1.7rem;
       height: 0.8rem;
       background-image: url(../images/arrow_down.png); }
+
+/*-------------------------------
+------- ADITIONAL INFO 2 --------
+-------------------------------*/
+.aditional-info-2 {
+  padding-top: 14rem;
+  padding-bottom: 14.5rem;
+  background-color: #fff;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  background-image: url(../images/background.png);
+  text-align: center; }
+  .aditional-info-2 h2, .aditional-info-2 p {
+    color: #ffffff;
+    padding: 0 3.9rem; }
+  .aditional-info-2 button {
+    margin: 0 auto;
+    margin-top: 5rem; }
