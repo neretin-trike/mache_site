@@ -16,3 +16,5 @@
 
 ### Запуск проекта в режиме разработки
 `gulp`
+
+![](https://github.com/neretin-trike/mache_site/blob/master/screenshot.png)
